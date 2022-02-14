@@ -1,0 +1,90 @@
+<section class="conatiner bg-white my-2" style="width: 99%; zindex:-1">
+<article class="row">
+<div class="col-3 bg-light text-center" id="figure">
+   {{#if user}}
+      <span class="editIcon">
+        <a href="/employee/edit-emp/{{payload._id}}">
+        <img src="" alt="logo">
+        
+           </a>
+      </span>
+      {{else}}
+      {{/if}}
+<figure class="my-2 p-2">
+<img class="img-thumbnail  p-2"
+src="{{trimString payload.emp_photo.0.path}}"
+alt="{{payload.emp_name}}" >
+</figure>
+<h2 class="h2 text-uppercase font-weight-bold text-primary p-2 text-center">
+{{payload.emp_name}}
+</h2>
+<p class="lead" style="margin-left: 5px;">
+{{payload.emp_mail}}
+</p>
+</div>
+<div class="col-9 bg-white my-2 p-2 container-fluid">
+<main>
+<h2 class="h2 text-uppercase border-bottom font-weight-bold text-dark pb-2 container-fluid ">
+{{payload.emp_name}}
+</h2>
+ {{#if user}}
+ <form
+          class="float-right text-danger"
+          method="post"
+          action="/employee/delete-emp/{{payload._id}}?_method=DELETE"
+        >
+          <input type="hidden" name="_method" value="DELETE" />
+          <button class="btn btn-danger btn-float-right" style="float: right; position:relative;">delete</button>
+        </form>
+        {{else}}
+        {{/if}}
+
+<p class="lead p-1">
+   empid : {{payload.emp_id}}
+</p>
+
+<p class="lead p-1">
+   salery : {{payload.emp_salary}}
+</p>
+
+<p class="lead p-1">
+   Education : {{payload.emp_edu}}
+</p>
+
+<p class="lead p-1">
+   Experience  : {{payload.emp_exp}}
+</p>
+
+<p class="lead p-1">
+   gender : {{payload.emp_gender}}
+</p>
+
+
+<p class="lead p-1 text-secondary">
+   percentage : {{payload.emp_perc}}
+</p>
+
+<p class="lead p-1 text-secondary">
+   Location : {{payload.emp_loc}}
+</p>
+
+
+<p class="lead p-1 text-secondary">
+   Skills : {{payload.emp_skills}}
+</p>
+
+
+<p class="lead p-1 text-secondary">
+   phone : {{payload.emp_phn}}
+</p>
+
+
+
+
+
+
+</main>
+
+</div>
+</article>
+</section>

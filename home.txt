@@ -1,0 +1,50 @@
+{{!-- <section class="container my-4"  id="tab">
+    <article>
+        <table class="table table-border table-hover " style="position: relative; left: -250;" >
+                <thead class="table-dark table-border-radius" >
+                    <tr>
+                         <th>photo</th>
+                         <th>name</th>
+                         <th>id</th>
+                         <th>salary</th>
+                         <th>education</th>
+                         <th>gender</th>
+                         <th>percentage</th>
+                         <th>location</th>
+                         <th>experience</th>
+                         <th>skills</th>
+                         <th>phone</th>
+                         <th>mail</th>
+                         <th>View profile</th>
+                         <th>Edit Profile</th>
+                    </tr>
+                </thead>
+
+                <tbody class="bg-white" style="border-radius: 100px;">
+                  {{#each details}}   
+                  
+                   <tr>
+                            <td>
+                         <img class="img-thumbnail" src="{{trimString emp_photo.0.path}}" alt="{{emp_name}}">
+                    </td>
+                    <td>{{emp_name}}</td>
+                     <td>{{emp_id}}</td>
+                      <td>{{emp_salary}}</td>
+                       <td>{{emp_edu}}</td>
+                        <td>{{emp_gender}}</td>
+                         <td>{{emp_perc}}</td>
+                          <td>{{emp_loc}}</td>
+                           <td>{{emp_exp}}</td>
+                            <td>{{emp_skills}}</td>
+                             <td>{{emp_phn}}</td>
+                              <td>{{emp_mail}}</td>
+                              <td><a href="/employee/{{_id}}">view Profile</a></td>
+                              <td><a href="/employee/edit-emp/{{_id}}">edit Profile</a></td>
+                  
+                   </tr>
+                              
+                    {{/each}}
+                </tbody>
+        </table>
+    </article>
+</section> --}}

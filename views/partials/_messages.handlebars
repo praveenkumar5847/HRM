@@ -1,0 +1,32 @@
+{{#if SUCCESS_MESSAGE}}
+<div class="alert alert-success">
+       {{SUCCESS_MESSAGE}}
+ </div>
+{{/if}}
+
+
+{{#if ERROR_MESSAGE}}
+<div class="alert alert-danger">
+   {{ERROR_MESSAGE}}
+</div>
+{{/if}}
+
+
+{{#each errors}}
+
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    
+  </div>
+
+{{/each}}
+
+
+
+
+{{#if error}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{error}}
+    
+  </div>
+{{/if}}
